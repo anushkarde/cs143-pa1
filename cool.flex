@@ -153,7 +153,7 @@ WHITESPACE [ \t\n\r\f\v]
   }
 }
 
-{SINGLE_CHAR} { return yytext; }
+{SINGLE_CHAR} { return (int)(*yytext); }
 
 
  /*
