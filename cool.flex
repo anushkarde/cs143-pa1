@@ -178,16 +178,37 @@ WHITESPACE [ \t\n\r\f\v]
 \" string_buf_ptr = string_buf; BEGIN(string);
 
 <string>\" { 
-    BEGIN(INITIAL);
-    string_buf_ptr = "\0";
-    cool_yylval.symbol = stringtable.add_string(string_buf);
-    return STR_CONST; 
-  }
-
-<string><<EOF>> {
-  
+  BEGIN(INITIAL);
+  string_buf_ptr = "\0";
+  cool_yylval.symbol = stringtable.add_string(string_buf);
+  return STR_CONST; 
 }
+<string><<EOF>> {
+  BEGIN(string_transient);
+  cool_yylval.error_msg = "Unterminated string constant";
+  return ERROR; 
+}
+<string>[\n] {
+  BEGIN(INITIAL);
+  cool_yylval.error_msg = "Unterminated string constant";
+  return ERROR; 
+}
+<string>[\0] {
+  BEGIN(string_transient);
+  cool_yylval.error_msg = "String contains null character";
+  return ERROR; 
+}
+<string>. {
+  *string_buf_ptr++ = yytext[0];
+  if (string_buf_ptr - &string_buf[0] > MAX_STR_CONST) {
+    cool_yylval.error_msg = "String constant too long";
+    return ERROR;
+  }
+}
+<string_transient>[\n\"] {
+  BEGIN(INITIAL);
 
+}
 
 
 %%
