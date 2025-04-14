@@ -434,8 +434,8 @@ static void yynoreturn yy_fatal_error ( const char* msg  );
 /* %% [3.0] code to copy yytext_ptr to yytext[] goes here, if %array \ */\
 	(yy_c_buf_p) = yy_cp;
 /* %% [4.0] data tables for the DFA and the user's section 1 definitions go here */
-#define YY_NUM_RULES 35
-#define YY_END_OF_BUFFER 36
+#define YY_NUM_RULES 36
+#define YY_END_OF_BUFFER 37
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -445,11 +445,11 @@ struct yy_trans_info
 	};
 static const flex_int16_t yy_accept[152] =
     {   0,
-        0,    0,    0,    0,    0,    0,   36,   35,    5,   28,
+        0,    0,    0,    0,    0,    0,   37,   36,    5,   28,
         6,    2,    6,    6,   26,   26,   26,   26,   26,   26,
        26,   26,   26,   26,   26,   27,   27,   27,   27,   27,
        27,   27,   27,   27,   27,   27,   32,   30,   29,   31,
-       34,   33,   33,    2,    3,    4,    1,   26,   26,   26,
+       35,   34,   33,    2,    3,    4,    1,   26,   26,   26,
        26,   26,    9,   10,   11,   26,   26,   26,   26,   26,
        22,   26,   26,   26,   27,   27,   27,   27,   27,   27,
         9,   10,   11,   27,   27,   27,   27,   27,   22,   27,
@@ -633,12 +633,12 @@ static char *yy_last_accepting_cpos;
 extern int yy_flex_debug;
 int yy_flex_debug = 1;
 
-static const flex_int16_t yy_rule_linenum[35] =
+static const flex_int16_t yy_rule_linenum[36] =
     {   0,
       111,  113,  118,  119,  121,  127,  129,  130,  131,  132,
       133,  134,  135,  136,  137,  138,  139,  140,  141,  142,
       143,  144,  145,  147,  151,  155,  160,  179,  181,  192,
-      197,  202,  209,  212
+      198,  203,  212,  215,  219
     } ;
 
 /* The intent behind this definition is that it'll catch
@@ -1063,13 +1063,13 @@ do_action:	/* This label is used only to access EOF actions. */
 			{
 			if ( yy_act == 0 )
 				fprintf( stderr, "--scanner backing up\n" );
-			else if ( yy_act < 35 )
+			else if ( yy_act < 36 )
 				fprintf( stderr, "--accepting rule at line %ld (\"%s\")\n",
 				         (long)yy_rule_linenum[yy_act], yytext );
-			else if ( yy_act == 35 )
+			else if ( yy_act == 36 )
 				fprintf( stderr, "--accepting default rule (\"%s\")\n",
 				         yytext );
-			else if ( yy_act == 36 )
+			else if ( yy_act == 37 )
 				fprintf( stderr, "--(end of buffer or a NUL)\n" );
 			else
 				fprintf( stderr, "--EOF (start condition %d)\n", YY_START );
@@ -1279,6 +1279,7 @@ case 30:
 YY_RULE_SETUP
 #line 192 "cool.flex"
 {
+  curr_lineno++;
   BEGIN(INITIAL);
   cool_yylval.error_msg = "Unterminated string constant";
   return ERROR; 
@@ -1286,7 +1287,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 197 "cool.flex"
+#line 198 "cool.flex"
 {
   BEGIN(string_transient);
   cool_yylval.error_msg = "String contains null character";
@@ -1295,36 +1296,45 @@ YY_RULE_SETUP
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 202 "cool.flex"
+#line 203 "cool.flex"
 {
-  *string_buf_ptr++ = yytext[0];
-  if (string_buf_ptr - &string_buf[0] > MAX_STR_CONST) {
+  *string_buf_ptr = yytext[0];
+  string_buf_ptr++;
+  if (string_buf_ptr - &string_buf[0] >= MAX_STR_CONST) {
+    BEGIN(string_transient);
     cool_yylval.error_msg = "String constant too long";
     return ERROR;
   }
 }
 	YY_BREAK
 case 33:
-/* rule 33 can match eol */
 YY_RULE_SETUP
-#line 209 "cool.flex"
+#line 212 "cool.flex"
 {
   BEGIN(INITIAL);
 }
 	YY_BREAK
 case 34:
+/* rule 34 can match eol */
 YY_RULE_SETUP
-#line 212 "cool.flex"
+#line 215 "cool.flex"
 {
-  *string_buf_ptr++ = yytext[0];
+  curr_lineno++;
+  BEGIN(INITIAL);
 }
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 217 "cool.flex"
+#line 219 "cool.flex"
+{
+}
+	YY_BREAK
+case 36:
+YY_RULE_SETUP
+#line 223 "cool.flex"
 ECHO;
 	YY_BREAK
-#line 1328 "cool-lex.cc"
+#line 1338 "cool-lex.cc"
 case YY_STATE_EOF(INITIAL):
 case YY_STATE_EOF(string_transient):
 	yyterminate();
@@ -2474,6 +2484,6 @@ void yyfree (void * ptr )
 
 /* %ok-for-header */
 
-#line 217 "cool.flex"
+#line 223 "cool.flex"
 
 
