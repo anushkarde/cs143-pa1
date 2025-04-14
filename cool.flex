@@ -47,6 +47,10 @@ extern YYSTYPE cool_yylval;
  */
 
 DARROW =>
+
+/*
+ * Integer values
+ */
 INTEGER [0-9]+
 /*
  * Keywords
@@ -69,13 +73,23 @@ NEW        [nN][eE][wW]
 OF         [oO][fF]
 NOT        [nN][oO][tT]
 TRUE       [t][rR][uU][eE]
-FALSE [f][aA][lL][sS][eE]
+FALSE      [f][aA][lL][sS][eE]
 
 /*
  * Identifiers
  */
-TYPE_IDENTIFIER ([A-Z])([A-Z]|[a-z]|[0-9]|_)*
+TYPE_IDENTIFIER   ([A-Z])([A-Z]|[a-z]|[0-9]|_)*
 OBJECT_IDENTIFIER ([a-z])([A-Z]|[a-z]|[0-9]|_)*
+
+/*
+ * Single Characters/Special Characters 
+ */ 
+ASSIGN <-
+
+/* 
+ *
+ */
+WHITESPACE [ \t\n\r\f\v]
 
 %%
 
@@ -94,57 +108,24 @@ OBJECT_IDENTIFIER ([a-z])([A-Z]|[a-z]|[0-9]|_)*
   return INT_CONST; 
 }
 
-{CLASS} {
-  return CLASS;
-}
-{ELSE} {
-  return ELSE;
-}
-{FI} {
-  return FI;
-}
-{IF} {
-  return IF;
-}
-{IN} {
-  return IN;
-}
-{INHERITS} {
-  return INHERITS;
-}
-{ISVOID} {
-  return ISVOID;
-}
-{LET} {
-  return LET;
-}
-{LOOP} {
-  return LOOP;
-}
-{POOL} {
-  return POOL;
-}
-{THEN} {
-  return THEN;
-}
-{WHILE} {
-  return WHILE;
-}
-{CASE} {
-  return CASE;
-}
-{ESAC} {
-  return CLASS;
-}
-{NEW} {
-  return NEW;
-}
-{OF} {
-  return OF;
-}
-{NOT} {
-  return NOT;
-}
+{CLASS} { return CLASS; }
+{ELSE} { return ELSE; }
+{FI} { return FI; }
+{IF} { return IF; }
+{IN} { return IN; }
+{INHERITS} { return INHERITS; }
+{ISVOID} { return ISVOID; }
+{LET} { return LET; }
+{LOOP} { return LOOP; }
+{POOL} { return POOL; }
+{THEN} { return THEN; }
+{WHILE} { return WHILE; }
+{CASE} { return CASE; }
+{ESAC} { return CLASS; }
+{NEW} { return NEW; }
+{OF} { return OF; }
+{NOT} { return NOT; }
+
 {TRUE} {
   cool_yylval.boolean = true;
   return BOOL_CONST;
@@ -161,6 +142,14 @@ OBJECT_IDENTIFIER ([a-z])([A-Z]|[a-z]|[0-9]|_)*
 {OBJECT_IDENTIFIER} {
   cool_yylval.symbol = idtable.add_string(yytext);
   return OBJECTID;
+}
+
+{ASSIGN} { return ASSIGN; }
+
+{WHITESPACE} {
+  if (*yytext == '\n') {
+    curr_lineno++;
+  }
 }
 
 
