@@ -85,8 +85,7 @@ OBJECT_IDENTIFIER ([a-z])([A-Z]|[a-z]|[0-9]|_)*
  * Single Characters/Special Characters 
  */ 
 ASSIGN <-
-SINGLE_CHAR [{}();:+/*-]
-
+SINGLE_CHAR [{}();:+/*-=]
 /* 
  * Parsing for whitespace
  */
