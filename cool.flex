@@ -85,9 +85,10 @@ OBJECT_IDENTIFIER ([a-z])([A-Z]|[a-z]|[0-9]|_)*
  * Single Characters/Special Characters 
  */ 
 ASSIGN <-
+SINGLE_CHAR [{}();:+/*-]
 
 /* 
- *
+ * Parsing for whitespace
  */
 WHITESPACE [ \t\n\r\f\v]
 
@@ -151,6 +152,8 @@ WHITESPACE [ \t\n\r\f\v]
     curr_lineno++;
   }
 }
+
+{SINGLE_CHAR} { return yytext; }
 
 
  /*
