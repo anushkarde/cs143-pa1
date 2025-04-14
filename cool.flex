@@ -85,11 +85,17 @@ OBJECT_IDENTIFIER ([a-z])([A-Z]|[a-z]|[0-9]|_)*
  * Single Characters/Special Characters 
  */ 
 ASSIGN <-
-SINGLE_CHAR [{}();:+/*-=]
+LE <=
+SINGLE_CHAR [{}();:+/-=@<~.,\*]
+
 /* 
  * Parsing for whitespace
  */
 WHITESPACE [ \t\n\r\f\v]
+
+%x string 
+%x string_transient
+
 
 %%
 
@@ -107,6 +113,17 @@ WHITESPACE [ \t\n\r\f\v]
   cool_yylval.symbol = inttable.add_string(yytext); 
   return INT_CONST; 
 }
+
+{ASSIGN} { return ASSIGN; }
+{LE} { return LE; }
+
+{WHITESPACE} {
+  if (*yytext == '\n') {
+    curr_lineno++;
+  }
+}
+
+{SINGLE_CHAR} { return (int)(yytext[0]); }
 
 {CLASS} { return CLASS; }
 {ELSE} { return ELSE; }
@@ -144,17 +161,6 @@ WHITESPACE [ \t\n\r\f\v]
   return OBJECTID;
 }
 
-{ASSIGN} { return ASSIGN; }
-
-{WHITESPACE} {
-  if (*yytext == '\n') {
-    curr_lineno++;
-  }
-}
-
-{SINGLE_CHAR} { return (int)(*yytext); }
-
-
  /*
   * Keywords are case-insensitive except for the values true and false,
   * which must begin with a lower-case letter.
@@ -168,6 +174,20 @@ WHITESPACE [ \t\n\r\f\v]
   *  (but note that 'c' can't be the NUL character)
   *
   */
+
+\" string_buf_ptr = string_buf; BEGIN(string);
+
+<string>\" { 
+    BEGIN(INITIAL);
+    string_buf_ptr = "\0";
+    cool_yylval.symbol = stringtable.add_string(string_buf);
+    return STR_CONST; 
+  }
+
+<string><<EOF>> {
+  
+}
+
 
 
 %%
