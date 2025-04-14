@@ -47,6 +47,35 @@ extern YYSTYPE cool_yylval;
  */
 
 DARROW =>
+INTEGER [0-9]+
+/*
+ * Keywords
+ */
+CLASS      [cC][lL][aA][sS][sS]
+ELSE       [eE][lL][sS][eE]
+FI         [fF][iI]
+IF         [iI][fF]
+IN         [iI][nN]
+INHERITS   [iI][nN][hH][eE][rR][iI][tT][sS]
+ISVOID     [iI][sS][vV][oO][iI][dD]
+LET        [lL][eE][tT]
+LOOP       [lL][oO][oO][pP]
+POOL       [pP][oO][oO][lL]
+THEN       [tT][hH][eE][nN]
+WHILE      [wW][hH][iI][lL][eE]
+CASE       [cC][aA][sS][eE]
+ESAC       [eE][sS][aA][cC]
+NEW        [nN][eE][wW]
+OF         [oO][fF]
+NOT        [nN][oO][tT]
+TRUE       [t][rR][uU][eE]
+FALSE [f][aA][lL][sS][eE]
+
+/*
+ * Identifiers
+ */
+TYPE_IDENTIFIER ([A-Z])([A-Z]|[a-z]|[0-9]|_)*
+OBJECT_IDENTIFIER ([a-z])([A-Z]|[a-z]|[0-9]|_)*
 
 %%
 
@@ -59,6 +88,81 @@ DARROW =>
   *  The multiple-character operators.
   */
 {DARROW}		{ return (DARROW); }
+
+{INTEGER} { 
+  cool_yylval.symbol = inttable.add_string(yytext); 
+  return INT_CONST; 
+}
+
+{CLASS} {
+  return CLASS;
+}
+{ELSE} {
+  return ELSE;
+}
+{FI} {
+  return FI;
+}
+{IF} {
+  return IF;
+}
+{IN} {
+  return IN;
+}
+{INHERITS} {
+  return INHERITS;
+}
+{ISVOID} {
+  return ISVOID;
+}
+{LET} {
+  return LET;
+}
+{LOOP} {
+  return LOOP;
+}
+{POOL} {
+  return POOL;
+}
+{THEN} {
+  return THEN;
+}
+{WHILE} {
+  return WHILE;
+}
+{CASE} {
+  return CASE;
+}
+{ESAC} {
+  return CLASS;
+}
+{NEW} {
+  return NEW;
+}
+{OF} {
+  return OF;
+}
+{NOT} {
+  return NOT;
+}
+{TRUE} {
+  cool_yylval.boolean = true;
+  return BOOL_CONST;
+}
+{FALSE} {
+  cool_yylval.boolean = false;
+  return BOOL_CONST;
+}
+{TYPE_IDENTIFIER} {
+  cool_yylval.symbol = idtable.add_string(yytext);
+  return TYPEID;
+}
+
+{OBJECT_IDENTIFIER} {
+  cool_yylval.symbol = idtable.add_string(yytext);
+  return OBJECTID;
+}
+
 
  /*
   * Keywords are case-insensitive except for the values true and false,
