@@ -185,7 +185,7 @@ WHITESPACE [ \t\n\r\f\v]
 }
 <string><<EOF>> {
   BEGIN(string_transient);
-  cool_yylval.error_msg = "Unterminated string constant";
+  cool_yylval.error_msg = "EOF in string constant error";
   return ERROR; 
 }
 <string>[\n] {

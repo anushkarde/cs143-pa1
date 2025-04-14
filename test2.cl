@@ -4,8 +4,8 @@ class Main inherits IO {
         x = 10
         y = 10080998
         z = 1240x765
-        w = "100"
-
+        w = "This is not This is not This is not This is not This is not This is not This is not This is not Thishis is not This is not This is not This is not This is not This is not This is not Thishis is not This is not This is not This is not This is not This is not This is not Thishis is not This is not This is not This is not This is not This is not This is not Thishis is not This is not This is not This is not This is not This is not This is not Thishis is not This is not This is not This is not This is not This is not This is not Thishis is not This is not This is not This is not This is not This is not This is not Thishis is not This is not This is not This is not This is not This is not This is not Thishis is not This is not This is not This is not This is not This is not This is not Thishis is not This is not This is not This is not This is not This is not This is not Thishis is not This is not This is not This is not This is not This is not This is not Thishis is not This is not This is not This is not This is not This is not This is not Thishis is not This is not This is not This is not This is not This is not This is not Thishis is not This is not This is not This is not This is not This is not This is not Thishis is not This is not This is not This is not This is not This is not This is not This is not This is not This is not 
+         OK"
         -- recognize keywords
         
     };
