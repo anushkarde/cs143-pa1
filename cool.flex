@@ -207,7 +207,9 @@ WHITESPACE [ \t\n\r\f\v]
 }
 <string_transient>[\n\"] {
   BEGIN(INITIAL);
-
+}
+<string_transient>. {
+  *string_buf_ptr++ = yytext[0];
 }
 
 
