@@ -189,6 +189,7 @@ WHITESPACE [ \t\n\r\f\v]
   return ERROR; 
 }
 <string>[\n] {
+  curr_lineno++;
   BEGIN(INITIAL);
   cool_yylval.error_msg = "Unterminated string constant";
   return ERROR; 
@@ -200,17 +201,20 @@ WHITESPACE [ \t\n\r\f\v]
 }
 <string>. {
   *string_buf_ptr++ = yytext[0];
-  if (string_buf_ptr - &string_buf[0] > MAX_STR_CONST) {
+  if (string_buf_ptr - &string_buf[0] >= MAX_STR_CONST) {
     BEGIN(string_transient);
     cool_yylval.error_msg = "String constant too long";
     return ERROR;
   }
 }
-<string_transient>[\n\"] {
+<string_transient>[\"] {
+  BEGIN(INITIAL);
+}
+<string_transient>[\n] {
+  curr_lineno++;
   BEGIN(INITIAL);
 }
 <string_transient>. {
-  *string_buf_ptr++ = yytext[0];
 }
 
 
