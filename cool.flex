@@ -224,6 +224,8 @@ UNMATCHED_CLOSE_COMMENT "*"")"
   cool_yylval.symbol = stringtable.add_string(string_buf);
   return STR_CONST; 
 }
+<string>\[^tbnf] {
+}
 <string><<EOF>> {
   BEGIN(string_transient);
   cool_yylval.error_msg = "EOF in string constant error";
