@@ -6,9 +6,11 @@ class Main inherits IO {
         z = 1240x765
          OK"
          unmatched *)
+        -- escaped quote
+        "\""
+        "\"
          (* (*
          
          *)
-        
     };
 };

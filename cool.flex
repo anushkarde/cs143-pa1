@@ -87,7 +87,7 @@ OBJECT_IDENTIFIER ([a-z])([A-Z]|[a-z]|[0-9]|_)*
  */ 
 ASSIGN <-
 LE <=
-SINGLE_CHAR [{}();:+/-=@<~.,\*]
+SINGLE_CHAR [-{}();:+=@<~.,\*/]
 
 /* 
  * Parsing for whitespace
@@ -95,6 +95,11 @@ SINGLE_CHAR [{}();:+/-=@<~.,\*]
 WHITESPACE [ \t\n\r\f\v]
 
 UNMATCHED_CLOSE_COMMENT "*"")"
+
+/*
+ * Error catch all
+ */
+ERROR .
 
 %x string 
 %x string_transient
@@ -281,5 +286,9 @@ UNMATCHED_CLOSE_COMMENT "*"")"
 <string_transient>. {
 }
 
+{ERROR} {
+  cool_yylval.error_msg = &yytext[0];
+  return ERROR;
+}
 
 %%
