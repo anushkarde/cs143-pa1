@@ -33,6 +33,7 @@ char *string_buf_ptr;
 
 extern int curr_lineno;
 extern int verbose_flag;
+extern int opening_nested;
 
 extern YYSTYPE cool_yylval;
 
@@ -98,6 +99,7 @@ UNMATCHED_CLOSE_COMMENT "*"")"
 %x string 
 %x string_transient
 %x comment
+%x nested_comment
 
 
 %%
@@ -113,6 +115,27 @@ UNMATCHED_CLOSE_COMMENT "*"")"
   }
 }
 <comment>. {
+
+}
+
+"(*" opening_nested = 1; BEGIN(nested_comment);
+<nested_comment>"(*" {
+  opening_nested++;
+}
+<nested_comment>[<<EOF>>] {
+  cool_yylval.error_msg = "EOF in comment";
+  return ERROR;
+}
+<nested_comment>\n {
+  curr_lineno++;
+}
+<nested_comment>"*)" {
+  opening_nested--;
+  if (opening_nested == 0) {
+    BEGIN(INITIAL);
+  }
+}
+<nested_comment>. {
 
 }
 
