@@ -93,6 +93,8 @@ SINGLE_CHAR [{}();:+/-=@<~.,\*]
  */
 WHITESPACE [ \t\n\r\f\v]
 
+UNMATCHED_CLOSE_COMMENT *)
+
 %x string 
 %x string_transient
 
@@ -159,6 +161,11 @@ WHITESPACE [ \t\n\r\f\v]
 {OBJECT_IDENTIFIER} {
   cool_yylval.symbol = idtable.add_string(yytext);
   return OBJECTID;
+}
+
+{UNMATCHED_CLOSE_COMMENT} {
+  cool_yylval.error_msg = "Unmatched *)";
+  return ERROR;
 }
 
  /*
