@@ -1294,7 +1294,7 @@ YY_RULE_SETUP
 case 29:
 YY_RULE_SETUP
 #line 194 "cool.flex"
-{ return CLASS; }
+{ return ESAC; }
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
@@ -1364,7 +1364,7 @@ YY_RULE_SETUP
 #line 233 "cool.flex"
 { 
   BEGIN(INITIAL);
-  string_buf_ptr = "\0";
+  *string_buf_ptr = '\0';
   cool_yylval.symbol = stringtable.add_string(string_buf);
   return STR_CONST; 
 }
