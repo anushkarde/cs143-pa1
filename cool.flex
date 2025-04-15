@@ -224,8 +224,7 @@ UNMATCHED_CLOSE_COMMENT "*"")"
   cool_yylval.symbol = stringtable.add_string(string_buf);
   return STR_CONST; 
 }
-<string>\[^tbnf] {
-}
+
 <string><<EOF>> {
   BEGIN(string_transient);
   cool_yylval.error_msg = "EOF in string constant error";
@@ -242,6 +241,27 @@ UNMATCHED_CLOSE_COMMENT "*"")"
   cool_yylval.error_msg = "String contains null character";
   return ERROR; 
 }
+
+<string>\\[tbnf] {
+  if (yytext[1] == 'n') {
+    *string_buf_ptr = '\n';
+    string_buf_ptr++;
+  } else if (yytext[1] == 'b') {
+    *string_buf_ptr = '\b';
+    string_buf_ptr++;
+  } else if (yytext[1] == 't') {
+    *string_buf_ptr = '\t';
+    string_buf_ptr++;
+  } else {
+    *string_buf_ptr = '\f';
+    string_buf_ptr++;
+  }
+}
+<string>\\[^tbnf] {
+  *string_buf_ptr = yytext[1];
+  string_buf_ptr++;
+}
+
 <string>. {
   *string_buf_ptr = yytext[0];
   string_buf_ptr++;
