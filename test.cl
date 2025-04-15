@@ -105,10 +105,17 @@ class Main {
 class Test inherits IO {
     main(): Object {
         {
+            -- Base Objects
             let num: Int <- 42 in
             let txt: String <- "Hello\nWorld\tTabbed!" in
             let flag: Bool <- false in
+            t : T,
+            obj : Object,
+            str : String,
+            int : Int,
+            bool : Bool
 
+            -- Keywords
             if isvoid num then
                 out_string("Void\n")
             else
@@ -124,27 +131,42 @@ class Test inherits IO {
                 f: Bool => out_string("False branch\n");
             esac;
 
+            -- String with exactly 1024 chars
+            justRight = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            -- Detect escape sequences
+            tab = " \t      \\t"
+            backspace = " \b \\b"
+            formfeed = "\f "
+            newline = "\p = p, \n != \\n"
+
             new Test;
             not flag;
             ~5;
-
-            -- String length
             
         }
     };
 };
 
-
--- ERROR TESTS SECTION
-
-(* UNCLOSED COMMENT
-class Broken {
-*)  -- should cause unclosed comment error
+-- ===========================
+-- ERROR TESTS: STRINGS
+-- ===========================
 
 "Unclosed string literal  
 -- missing ending quote, should cause error
 
 "String with bad escape: \q"  -- invalid escape sequence
+
+"Ends with EOF \0"  -- null character not allowed in string
+
+let cross: String <- "This string
+spans lines";  -- non-escaped newline in string
+
+-- String with exactly 1025 chars (1 over limit)
+tooBig = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+
+-- ===========================
+-- ERROR TESTS: SYNTAX / EXPRESSIONS
+-- ===========================
 
 let bad <- 100 in  -- missing type declaration (should be let bad : Int <- 100)
 
@@ -154,13 +176,30 @@ if true then
 
 x <- 5 + ;  -- incomplete expression
 
+-- ===========================
+-- ERROR TESTS: IDENTIFIERS / KEYWORDS
+-- ===========================
+
 class class inherits Int { }  -- 'class' used as an identifier (should be error)
 
 0abc <- 10;  -- invalid identifier (starts with a digit)
 
 let \tweird: String <- "ok";  -- invalid identifier with escape character
 
-"Ends with EOF \0"  -- null character not allowed in string
+-- ===========================
+-- ERROR TESTS: INVALID ASCII CHARACTERS
+-- ===========================
 
-let cross: String <- "This string
-spans lines";  -- non-escaped newline in string
+∆øßˆß˚¬∆ƒ¬˚ß√ß¬˚  -- non-ASCII characters
+
+-- ===========================
+-- ERROR TESTS: COMMENTS
+-- ===========================
+
+(* UNCLOSED COMMENT
+class Broken {
+*)  -- should cause unclosed comment error
+
+(*  -- Unterminated comment
+
+(*(*(*(*(*(* *)*)*)*)*)  -- EOF inside nested comment (unbalanced)

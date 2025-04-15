@@ -371,138 +371,211 @@
 #106 TYPEID Object
 #106 '{'
 #107 '{'
-#108 LET
-#108 OBJECTID num
-#108 ':'
-#108 TYPEID Int
-#108 ASSIGN
-#108 INT_CONST 42
-#108 IN
 #109 LET
-#109 OBJECTID txt
+#109 OBJECTID num
 #109 ':'
-#109 TYPEID String
+#109 TYPEID Int
 #109 ASSIGN
-#109 STR_CONST "Hello\nWorld\tTabbed!"
+#109 INT_CONST 42
 #109 IN
 #110 LET
-#110 OBJECTID flag
+#110 OBJECTID txt
 #110 ':'
-#110 TYPEID Bool
+#110 TYPEID String
 #110 ASSIGN
-#110 BOOL_CONST false
+#110 STR_CONST "Hello\nWorld\tTabbed!"
 #110 IN
-#112 IF
-#112 ISVOID
-#112 OBJECTID num
-#112 THEN
-#113 OBJECTID out_string
-#113 '('
-#113 STR_CONST "Void\n"
-#113 ')'
-#114 ELSE
-#115 OBJECTID out_int
-#115 '('
-#115 OBJECTID num
-#115 '+'
-#115 INT_CONST 1
-#115 ')'
-#116 FI
-#116 ';'
-#118 WHILE
-#118 OBJECTID num
-#118 '<'
-#118 INT_CONST 100
-#118 LOOP
+#111 LET
+#111 OBJECTID flag
+#111 ':'
+#111 TYPEID Bool
+#111 ASSIGN
+#111 BOOL_CONST false
+#111 IN
+#112 OBJECTID t
+#112 ':'
+#112 TYPEID T
+#112 ','
+#113 OBJECTID obj
+#113 ':'
+#113 TYPEID Object
+#113 ','
+#114 OBJECTID str
+#114 ':'
+#114 TYPEID String
+#114 ','
+#115 OBJECTID int
+#115 ':'
+#115 TYPEID Int
+#115 ','
+#116 OBJECTID bool
+#116 ':'
+#116 TYPEID Bool
+#119 IF
+#119 ISVOID
 #119 OBJECTID num
-#119 ASSIGN
-#119 OBJECTID num
-#119 '+'
-#119 INT_CONST 1
-#120 POOL
-#120 ';'
-#122 CASE
-#122 OBJECTID flag
-#122 OF
-#123 OBJECTID t
-#123 ':'
-#123 TYPEID Bool
-#123 DARROW
-#123 OBJECTID out_string
-#123 '('
-#123 STR_CONST "True branch\n"
-#123 ')'
+#119 THEN
+#120 OBJECTID out_string
+#120 '('
+#120 STR_CONST "Void\n"
+#120 ')'
+#121 ELSE
+#122 OBJECTID out_int
+#122 '('
+#122 OBJECTID num
+#122 '+'
+#122 INT_CONST 1
+#122 ')'
+#123 FI
 #123 ';'
-#124 OBJECTID f
-#124 ':'
-#124 TYPEID Bool
-#124 DARROW
-#124 OBJECTID out_string
-#124 '('
-#124 STR_CONST "False branch\n"
-#124 ')'
-#124 ';'
-#125 ESAC
-#125 ';'
-#127 NEW
-#127 TYPEID Test
+#125 WHILE
+#125 OBJECTID num
+#125 '<'
+#125 INT_CONST 100
+#125 LOOP
+#126 OBJECTID num
+#126 ASSIGN
+#126 OBJECTID num
+#126 '+'
+#126 INT_CONST 1
+#127 POOL
 #127 ';'
-#128 NOT
-#128 OBJECTID flag
-#128 ';'
-#129 '~'
-#129 INT_CONST 5
-#129 ';'
-#133 '}'
-#134 '}'
-#134 ';'
-#135 '}'
-#135 ';'
-#145 ERROR "Unterminated string constant"
-#147 STR_CONST "String with bad escape: q"
-#149 LET
-#149 OBJECTID bad
-#149 ASSIGN
-#149 INT_CONST 100
-#149 IN
-#151 IF
-#151 BOOL_CONST true
-#151 THEN
-#152 OBJECTID out_string
-#152 '('
-#152 STR_CONST "if block"
-#152 ')'
-#155 OBJECTID x
-#155 ASSIGN
-#155 INT_CONST 5
-#155 '+'
-#155 ';'
-#157 CLASS
-#157 CLASS
-#157 INHERITS
-#157 TYPEID Int
-#157 '{'
-#157 '}'
-#159 INT_CONST 0
-#159 OBJECTID abc
-#159 ASSIGN
-#159 INT_CONST 10
-#159 ';'
+#129 CASE
+#129 OBJECTID flag
+#129 OF
+#130 OBJECTID t
+#130 ':'
+#130 TYPEID Bool
+#130 DARROW
+#130 OBJECTID out_string
+#130 '('
+#130 STR_CONST "True branch\n"
+#130 ')'
+#130 ';'
+#131 OBJECTID f
+#131 ':'
+#131 TYPEID Bool
+#131 DARROW
+#131 OBJECTID out_string
+#131 '('
+#131 STR_CONST "False branch\n"
+#131 ')'
+#131 ';'
+#132 ESAC
+#132 ';'
+#135 OBJECTID justRight
+#135 '='
+#135 STR_CONST "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+#137 OBJECTID tab
+#137 '='
+#137 STR_CONST " \t      \\t"
+#138 OBJECTID backspace
+#138 '='
+#138 STR_CONST " \b \\b"
+#139 OBJECTID formfeed
+#139 '='
+#139 STR_CONST "\f "
+#140 OBJECTID newline
+#140 '='
+#140 STR_CONST "p = p, \n != \\n"
+#142 NEW
+#142 TYPEID Test
+#142 ';'
+#143 NOT
+#143 OBJECTID flag
+#143 ';'
+#144 '~'
+#144 INT_CONST 5
+#144 ';'
+#146 '}'
+#147 '}'
+#147 ';'
+#148 '}'
+#148 ';'
+#155 ERROR "Unterminated string constant"
+#157 STR_CONST "String with bad escape: q"
+#159 STR_CONST "Ends with EOF 0"
 #161 LET
-#161 ERROR "\\"
-#161 OBJECTID tweird
+#161 OBJECTID cross
 #161 ':'
 #161 TYPEID String
 #161 ASSIGN
-#161 STR_CONST "ok"
-#161 ';'
-#163 STR_CONST "Ends with EOF 0"
-#165 LET
-#165 OBJECTID cross
-#165 ':'
-#165 TYPEID String
-#165 ASSIGN
-#166 ERROR "Unterminated string constant"
-#166 OBJECTID spans
-#166 OBJECTID lines
-#166 ERROR "EOF in string constant"
+#162 ERROR "Unterminated string constant"
+#162 OBJECTID spans
+#162 OBJECTID lines
+#163 ERROR "Unterminated string constant"
+#165 OBJECTID tooBig
+#165 '='
+#165 ERROR "String constant too long"
+#171 LET
+#171 OBJECTID bad
+#171 ASSIGN
+#171 INT_CONST 100
+#171 IN
+#173 IF
+#173 BOOL_CONST true
+#173 THEN
+#174 OBJECTID out_string
+#174 '('
+#174 STR_CONST "if block"
+#174 ')'
+#177 OBJECTID x
+#177 ASSIGN
+#177 INT_CONST 5
+#177 '+'
+#177 ';'
+#183 CLASS
+#183 CLASS
+#183 INHERITS
+#183 TYPEID Int
+#183 '{'
+#183 '}'
+#185 INT_CONST 0
+#185 OBJECTID abc
+#185 ASSIGN
+#185 INT_CONST 10
+#185 ';'
+#187 LET
+#187 ERROR "\\"
+#187 OBJECTID tweird
+#187 ':'
+#187 TYPEID String
+#187 ASSIGN
+#187 STR_CONST "ok"
+#187 ';'
+#193 ERROR "\342"
+#193 ERROR "\210"
+#193 ERROR "\206"
+#193 ERROR "\303"
+#193 ERROR "\270"
+#193 ERROR "\303"
+#193 ERROR "\237"
+#193 ERROR "\313"
+#193 ERROR "\206"
+#193 ERROR "\303"
+#193 ERROR "\237"
+#193 ERROR "\313"
+#193 ERROR "\232"
+#193 ERROR "\302"
+#193 ERROR "\254"
+#193 ERROR "\342"
+#193 ERROR "\210"
+#193 ERROR "\206"
+#193 ERROR "\306"
+#193 ERROR "\222"
+#193 ERROR "\302"
+#193 ERROR "\254"
+#193 ERROR "\313"
+#193 ERROR "\232"
+#193 ERROR "\303"
+#193 ERROR "\237"
+#193 ERROR "\342"
+#193 ERROR "\210"
+#193 ERROR "\232"
+#193 ERROR "\303"
+#193 ERROR "\237"
+#193 ERROR "\302"
+#193 ERROR "\254"
+#193 ERROR "\313"
+#193 ERROR "\232"
+#205 ERROR "EOF in comment"
