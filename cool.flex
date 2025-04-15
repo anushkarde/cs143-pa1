@@ -93,7 +93,7 @@ SINGLE_CHAR [{}();:+/-=@<~.,\*]
  */
 WHITESPACE [ \t\n\r\f\v]
 
-UNMATCHED_CLOSE_COMMENT *)
+UNMATCHED_CLOSE_COMMENT "*"")"
 
 %x string 
 %x string_transient
@@ -105,11 +105,15 @@ UNMATCHED_CLOSE_COMMENT *)
   *  Nested comments
   */
 
-
+{UNMATCHED_CLOSE_COMMENT} {
+    cool_yylval.error_msg = "Unmatched *)";
+    return ERROR;
+  }
  /*
   *  The multiple-character operators.
   */
 {DARROW}		{ return (DARROW); }
+
 
 {INTEGER} { 
   cool_yylval.symbol = inttable.add_string(yytext); 
@@ -161,11 +165,6 @@ UNMATCHED_CLOSE_COMMENT *)
 {OBJECT_IDENTIFIER} {
   cool_yylval.symbol = idtable.add_string(yytext);
   return OBJECTID;
-}
-
-{UNMATCHED_CLOSE_COMMENT} {
-  cool_yylval.error_msg = "Unmatched *)";
-  return ERROR;
 }
 
  /*
