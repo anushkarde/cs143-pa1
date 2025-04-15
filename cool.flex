@@ -30,10 +30,10 @@ extern FILE *fin; /* we read from this file */
 
 char string_buf[MAX_STR_CONST]; /* to assemble string constants */
 char *string_buf_ptr;
+int opening_nested;
 
 extern int curr_lineno;
 extern int verbose_flag;
-extern int opening_nested;
 
 extern YYSTYPE cool_yylval;
 
