@@ -1382,7 +1382,7 @@ case YY_STATE_EOF(string):
 #line 245 "cool.flex"
 {
   BEGIN(string_transient);
-  cool_yylval.error_msg = "EOF in string constant error";
+  cool_yylval.error_msg = "EOF in string constant";
   return ERROR; 
 }
 	YY_BREAK

@@ -1,0 +1,29 @@
+#name "test2.cl"
+#1 CLASS
+#1 TYPEID Main
+#1 INHERITS
+#1 TYPEID IO
+#1 '{'
+#2 OBJECTID main
+#2 '('
+#2 ')'
+#2 ':'
+#2 TYPEID SELF_TYPE
+#2 '{'
+#4 OBJECTID x
+#4 '='
+#4 INT_CONST 10
+#5 OBJECTID y
+#5 '='
+#5 INT_CONST 10080998
+#6 OBJECTID z
+#6 '='
+#6 INT_CONST 1240
+#6 OBJECTID x765
+#7 TYPEID OK
+#8 ERROR "Unterminated string constant"
+#8 OBJECTID unmatched
+#8 ERROR "Unmatched *)"
+#10 STR_CONST "\""
+#12 ERROR "Unterminated string constant"
+#16 ERROR "EOF in comment"

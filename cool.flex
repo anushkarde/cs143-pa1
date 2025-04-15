@@ -243,7 +243,7 @@ ERROR .
 
 <string><<EOF>> {
   BEGIN(string_transient);
-  cool_yylval.error_msg = "EOF in string constant error";
+  cool_yylval.error_msg = "EOF in string constant";
   return ERROR; 
 }
 <string>\n {

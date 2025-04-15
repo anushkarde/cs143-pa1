@@ -1,0 +1,104 @@
+#name "test4.cl"
+#2 CLASS
+#2 TYPEID IdentifierTest
+#2 '{'
+#4 OBJECTID normal_id
+#4 ':'
+#4 TYPEID Int
+#4 ';'
+#5 ERROR "_"
+#5 OBJECTID underscore_id
+#5 ':'
+#5 TYPEID Int
+#5 ';'
+#6 OBJECTID id_with_numbers123
+#6 ':'
+#6 TYPEID Int
+#6 ';'
+#7 OBJECTID a
+#7 ':'
+#7 TYPEID Int
+#7 ';'
+#8 OBJECTID averyverylongidentifierthatisvalidbutprobablynotgoodpractice
+#8 ':'
+#8 TYPEID Int
+#8 ';'
+#11 OBJECTID objectOfType
+#11 ':'
+#11 TYPEID MyType
+#11 ';'
+#12 OBJECTID objectOfPredefinedType
+#12 ':'
+#12 TYPEID String
+#12 ';'
+#13 OBJECTID objectOfSimpleType
+#13 ':'
+#13 TYPEID T
+#13 ';'
+#14 OBJECTID objectOfLongTypeNameThatIsValidButProbablyNotGoodPractice
+#14 ':'
+#14 TYPEID VeryLongTypeName
+#14 ';'
+#17 OBJECTID id_with_special_char
+#17 ERROR "$"
+#17 ':'
+#17 TYPEID Int
+#17 ';'
+#18 INT_CONST 123
+#18 OBJECTID invalid_starting_with_number
+#18 ':'
+#18 TYPEID Int
+#18 ';'
+#19 OBJECTID sp
+#19 ERROR "\303"
+#19 ERROR "\251"
+#19 OBJECTID cial_ch
+#19 ERROR "\303"
+#19 ERROR "\242"
+#19 OBJECTID rs
+#19 ':'
+#19 TYPEID Int
+#19 ';'
+#21 OBJECTID main
+#21 '('
+#21 ')'
+#21 ':'
+#21 TYPEID Object
+#21 '{'
+#22 LET
+#22 OBJECTID self_type
+#22 ':'
+#22 TYPEID SELF_TYPE
+#22 ','
+#23 OBJECTID t
+#23 ':'
+#23 TYPEID T
+#23 ','
+#24 OBJECTID io
+#24 ':'
+#24 TYPEID IO
+#24 ','
+#25 OBJECTID obj
+#25 ':'
+#25 TYPEID Object
+#25 ','
+#26 OBJECTID str
+#26 ':'
+#26 TYPEID String
+#26 ','
+#27 OBJECTID int
+#27 ':'
+#27 TYPEID Int
+#27 ','
+#28 OBJECTID bool
+#28 ':'
+#28 TYPEID Bool
+#29 IN
+#29 '{'
+#30 OBJECTID self
+#30 ';'
+#31 '}'
+#32 '}'
+#32 ';'
+#33 '}'
+#33 ';'
