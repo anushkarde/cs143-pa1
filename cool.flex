@@ -121,12 +121,6 @@ ERROR .
 <comment><<EOF>> {
   BEGIN(INITIAL);
 }
-<comment><<EOF>> {
-  BEGIN(INITIAL);
-}
-<comment><<EOF>> {
-  BEGIN(INITIAL);
-}
 <comment>. {
 
 }

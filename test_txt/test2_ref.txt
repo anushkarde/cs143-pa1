@@ -26,4 +26,4 @@
 #8 ERROR "Unmatched *)"
 #10 STR_CONST "\""
 #12 ERROR "Unterminated string constant"
-#16 ERROR "EOF in comment"
+#18 ERROR "EOF in comment"
