@@ -97,6 +97,7 @@ UNMATCHED_CLOSE_COMMENT "*"")"
 
 %x string 
 %x string_transient
+%x comment
 
 
 %%
@@ -104,6 +105,16 @@ UNMATCHED_CLOSE_COMMENT "*"")"
  /*
   *  Nested comments
   */
+"--" BEGIN(comment); 
+<comment>[\n<<EOF>>] {
+  BEGIN(INITIAL);
+  if (yytext[0] == '\n') {
+    curr_lineno++;
+  }
+}
+<comment>. {
+
+}
 
 {UNMATCHED_CLOSE_COMMENT} {
     cool_yylval.error_msg = "Unmatched *)";
