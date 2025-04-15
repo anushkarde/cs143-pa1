@@ -5,8 +5,10 @@ class Main inherits IO {
         y = 10080998
         z = 1240x765
          OK"
-         hello *)
-        -- recognize keywords
+         unmatched *)
+         (* (*
+         
+         *)
         
     };
 };

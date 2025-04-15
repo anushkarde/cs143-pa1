@@ -122,8 +122,9 @@ UNMATCHED_CLOSE_COMMENT "*"")"
 <nested_comment>"(*" {
   opening_nested++;
 }
-<nested_comment>[<<EOF>>] {
+<nested_comment><<EOF>> {
   cool_yylval.error_msg = "EOF in comment";
+  BEGIN(INITIAL);
   return ERROR;
 }
 <nested_comment>\n {
