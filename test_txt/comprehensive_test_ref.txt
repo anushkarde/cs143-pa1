@@ -1,0 +1,770 @@
+#name "comprehensive_test.cl"
+#3 INT_CONST 090324
+#4 INT_CONST 34194320412389481958193483912483294812394320148932
+#5 INT_CONST 34132432
+#5 INT_CONST 124321423
+#5 INT_CONST 1234314123
+#6 INT_CONST 1234
+#6 INT_CONST 134
+#6 INT_CONST 4932143
+#8 CASE
+#8 CASE
+#8 CASE
+#8 CASE
+#8 CASE
+#8 CASE
+#8 CASE
+#8 CASE
+#8 CASE
+#8 CASE
+#8 CASE
+#8 CASE
+#8 CASE
+#8 CASE
+#8 CASE
+#8 CASE
+#9 IN
+#9 IN
+#9 IN
+#9 IN
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#10 ISVOID
+#11 LET
+#11 LET
+#11 LET
+#11 LET
+#11 LET
+#11 LET
+#11 LET
+#11 LET
+#12 NEW
+#12 NEW
+#12 NEW
+#12 NEW
+#12 NEW
+#12 NEW
+#12 NEW
+#12 NEW
+#13 NOT
+#13 NOT
+#13 NOT
+#13 NOT
+#13 NOT
+#13 NOT
+#13 NOT
+#13 NOT
+#14 POOL
+#14 POOL
+#14 POOL
+#14 POOL
+#14 POOL
+#14 POOL
+#14 POOL
+#14 POOL
+#14 POOL
+#14 POOL
+#14 POOL
+#14 POOL
+#14 POOL
+#14 POOL
+#14 POOL
+#14 POOL
+#15 TYPEID TRUE
+#15 TYPEID TRUe
+#15 TYPEID TRuE
+#15 TYPEID TRue
+#15 TYPEID TrUE
+#15 TYPEID TrUe
+#15 TYPEID TruE
+#15 TYPEID True
+#15 BOOL_CONST true
+#15 BOOL_CONST true
+#15 BOOL_CONST true
+#15 BOOL_CONST true
+#15 BOOL_CONST true
+#15 BOOL_CONST true
+#15 BOOL_CONST true
+#15 BOOL_CONST true
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#16 WHILE
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#17 CLASS
+#18 ELSE
+#18 ELSE
+#18 ELSE
+#18 ELSE
+#18 ELSE
+#18 ELSE
+#18 ELSE
+#18 ELSE
+#18 ELSE
+#18 ELSE
+#18 ELSE
+#18 ELSE
+#18 ELSE
+#18 ELSE
+#18 ELSE
+#18 ELSE
+#19 ESAC
+#19 ESAC
+#19 ESAC
+#19 ESAC
+#19 ESAC
+#19 ESAC
+#19 ESAC
+#19 ESAC
+#19 ESAC
+#19 ESAC
+#19 ESAC
+#19 ESAC
+#19 ESAC
+#19 ESAC
+#19 ESAC
+#19 ESAC
+#20 TYPEID FALSE
+#20 TYPEID FALSe
+#20 TYPEID FALsE
+#20 TYPEID FALse
+#20 TYPEID FAlSE
+#20 TYPEID FAlSe
+#20 TYPEID FAlsE
+#20 TYPEID FAlse
+#20 TYPEID FaLSE
+#20 TYPEID FaLSe
+#20 TYPEID FaLsE
+#20 TYPEID FaLse
+#20 TYPEID FalSE
+#20 TYPEID FalSe
+#20 TYPEID FalsE
+#20 TYPEID False
+#20 BOOL_CONST false
+#20 BOOL_CONST false
+#20 BOOL_CONST false
+#20 BOOL_CONST false
+#20 BOOL_CONST false
+#20 BOOL_CONST false
+#20 BOOL_CONST false
+#20 BOOL_CONST false
+#20 BOOL_CONST false
+#20 BOOL_CONST false
+#20 BOOL_CONST false
+#20 BOOL_CONST false
+#20 BOOL_CONST false
+#20 BOOL_CONST false
+#20 BOOL_CONST false
+#20 BOOL_CONST false
+#21 FI
+#21 FI
+#21 FI
+#21 FI
+#22 IF
+#22 IF
+#22 IF
+#22 IF
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#23 INHERITS
+#24 LOOP
+#24 LOOP
+#24 LOOP
+#24 LOOP
+#24 LOOP
+#24 LOOP
+#24 LOOP
+#24 LOOP
+#24 LOOP
+#24 LOOP
+#24 LOOP
+#24 LOOP
+#24 LOOP
+#24 LOOP
+#24 LOOP
+#24 LOOP
+#25 OF
+#25 OF
+#25 OF
+#25 OF
+#26 THEN
+#26 THEN
+#26 THEN
+#26 THEN
+#26 THEN
+#26 THEN
+#26 THEN
+#26 THEN
+#26 THEN
+#26 THEN
+#26 THEN
+#26 THEN
+#26 THEN
+#26 THEN
+#26 THEN
+#26 THEN
+#29 TYPEID Hello
+#30 ERROR "_"
+#30 OBJECTID fasjdfkdsfE
+#31 OBJECTID fight
+#32 OBJECTID friend
+#33 OBJECTID fRIE123214
+#34 INT_CONST 1
+#34 TYPEID Fredfasd
+#37 ':'
+#37 ';'
+#37 ','
+#37 '.'
+#37 '@'
+#37 ERROR "["
+#37 ERROR "]"
+#37 '{'
+#37 '}'
+#37 '('
+#37 ')'
+#37 DARROW
+#37 ASSIGN
+#37 '+'
+#37 '-'
+#37 '*'
+#37 '/'
+#37 '~'
+#37 '<'
+#37 LE
+#37 '='
+#41 OBJECTID aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+#44 OBJECTID aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+#47 OBJECTID aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+#55 STR_CONST "\n\n\t\bpcr\\asfdfd\fdsaf"
+#57 ERROR "Unterminated string constant"
+#57 STR_CONST ""
+#59 ERROR "Unterminated string constant"
+#62 CLASS
+#62 TYPEID Test
+#62 INHERITS
+#62 TYPEID IO
+#62 '{'
+#63 OBJECTID main
+#63 '('
+#63 ')'
+#63 ':'
+#63 TYPEID Object
+#63 '{'
+#64 '{'
+#65 LET
+#65 OBJECTID num
+#65 ':'
+#65 TYPEID Int
+#65 ASSIGN
+#65 INT_CONST 42
+#65 IN
+#66 LET
+#66 OBJECTID txt
+#66 ':'
+#66 TYPEID String
+#66 ASSIGN
+#66 STR_CONST "Hello\nWorld\tTabbed!"
+#66 IN
+#67 LET
+#67 OBJECTID flag
+#67 ':'
+#67 TYPEID Bool
+#67 ASSIGN
+#67 BOOL_CONST false
+#67 IN
+#69 IF
+#69 ISVOID
+#69 OBJECTID num
+#69 THEN
+#70 OBJECTID out_string
+#70 '('
+#70 STR_CONST "Void\n"
+#70 ')'
+#71 ELSE
+#72 OBJECTID out_int
+#72 '('
+#72 OBJECTID num
+#72 '+'
+#72 INT_CONST 1
+#72 ')'
+#73 FI
+#73 ';'
+#75 WHILE
+#75 OBJECTID num
+#75 '<'
+#75 INT_CONST 100
+#75 LOOP
+#76 OBJECTID num
+#76 ASSIGN
+#76 OBJECTID num
+#76 '+'
+#76 INT_CONST 1
+#77 POOL
+#77 ';'
+#79 CASE
+#79 OBJECTID flag
+#79 OF
+#80 OBJECTID t
+#80 ':'
+#80 TYPEID Bool
+#80 DARROW
+#80 OBJECTID out_string
+#80 '('
+#80 STR_CONST "True branch\n"
+#80 ')'
+#80 ';'
+#81 OBJECTID f
+#81 ':'
+#81 TYPEID Bool
+#81 DARROW
+#81 OBJECTID out_string
+#81 '('
+#81 STR_CONST "False branch\n"
+#81 ')'
+#81 ';'
+#82 ESAC
+#82 ';'
+#85 OBJECTID justRight
+#85 '='
+#85 STR_CONST "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+#88 NEW
+#88 TYPEID Test
+#88 ';'
+#89 NOT
+#89 OBJECTID flag
+#89 ';'
+#90 '~'
+#90 INT_CONST 5
+#90 ';'
+#91 '}'
+#92 '}'
+#92 ';'
+#93 '}'
+#93 ';'
+#103 ERROR "Unterminated string constant"
+#105 STR_CONST "String with bad escape: q"
+#107 LET
+#107 OBJECTID bad
+#107 ASSIGN
+#107 INT_CONST 100
+#107 IN
+#109 IF
+#109 BOOL_CONST true
+#109 THEN
+#110 OBJECTID out_string
+#110 '('
+#110 STR_CONST "if block"
+#110 ')'
+#113 OBJECTID x
+#113 ASSIGN
+#113 INT_CONST 5
+#113 '+'
+#113 ';'
+#115 CLASS
+#115 CLASS
+#115 INHERITS
+#115 TYPEID Int
+#115 '{'
+#115 '}'
+#117 INT_CONST 0
+#117 OBJECTID abc
+#117 ASSIGN
+#117 INT_CONST 10
+#117 ';'
+#119 LET
+#119 ERROR "\\"
+#119 OBJECTID tweird
+#119 ':'
+#119 TYPEID String
+#119 ASSIGN
+#119 STR_CONST "ok"
+#119 ';'
+#121 STR_CONST "Ends with EOF 0"
+#123 LET
+#123 OBJECTID cross
+#123 ':'
+#123 TYPEID String
+#123 ASSIGN
+#124 ERROR "Unterminated string constant"
+#124 OBJECTID spans
+#124 OBJECTID lines
+#125 ERROR "Unterminated string constant"
+#127 OBJECTID tooBig
+#127 '='
+#127 ERROR "String constant too long"
+#130 ERROR "\303"
+#130 ERROR "\240"
+#130 '='
+#130 STR_CONST "\302\250\313\232\303\270\313\206\313\231\303\270\313\206\313\206\303\270\302\250\313\234\313\232\342\210\206\342\210\206\313\231\302\251"
