@@ -110,7 +110,7 @@ ERROR .
 %%
 
  /*
-  *  Nested comments
+  *  Single line comments
   */
 "--" BEGIN(comment); 
 <comment>[\n<<EOF>>] {
@@ -122,6 +122,9 @@ ERROR .
 <comment>. {
 
 }
+ /*
+  *  Nested comments
+  */
 
 "(*" opening_nested = 1; BEGIN(nested_comment);
 <nested_comment>"(*" {
@@ -249,27 +252,21 @@ ERROR .
 
 <string>\\[tbnf] {
   if (yytext[1] == 'n') {
-    *string_buf_ptr = '\n';
-    string_buf_ptr++;
+    *string_buf_ptr++ = '\n';
   } else if (yytext[1] == 'b') {
-    *string_buf_ptr = '\b';
-    string_buf_ptr++;
+    *string_buf_ptr++ = '\b';
   } else if (yytext[1] == 't') {
-    *string_buf_ptr = '\t';
-    string_buf_ptr++;
+    *string_buf_ptr++ = '\t';
   } else {
-    *string_buf_ptr = '\f';
-    string_buf_ptr++;
+    *string_buf_ptr++ = '\f';
   }
 }
 <string>\\[^tbnf] {
-  *string_buf_ptr = yytext[1];
-  string_buf_ptr++;
+  *string_buf_ptr++ = yytext[1];
 }
 
 <string>. {
-  *string_buf_ptr = yytext[0];
-  string_buf_ptr++;
+  *string_buf_ptr++ = yytext[0];
   if (string_buf_ptr - &string_buf[0] >= MAX_STR_CONST) {
     BEGIN(string_transient);
     cool_yylval.error_msg = "String constant too long";
