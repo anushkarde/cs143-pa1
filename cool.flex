@@ -113,10 +113,16 @@ ERROR .
   *  Single line comments
   */
 "--" BEGIN(comment); 
-<comment>[\n] {
+<comment>\n {
   BEGIN(INITIAL);
   if (yytext[0] == '\n')
     curr_lineno++;
+}
+<comment><<EOF>> {
+  BEGIN(INITIAL);
+}
+<comment><<EOF>> {
+  BEGIN(INITIAL);
 }
 <comment><<EOF>> {
   BEGIN(INITIAL);
@@ -189,7 +195,7 @@ ERROR .
 {THEN} { return THEN; }
 {WHILE} { return WHILE; }
 {CASE} { return CASE; }
-{ESAC} { return CLASS; }
+{ESAC} { return ESAC; }
 {NEW} { return NEW; }
 {OF} { return OF; }
 {NOT} { return NOT; }
@@ -230,7 +236,7 @@ ERROR .
 
 <string>\" { 
   BEGIN(INITIAL);
-  string_buf_ptr = "\0";
+  *string_buf_ptr = '\0';
   cool_yylval.symbol = stringtable.add_string(string_buf);
   return STR_CONST; 
 }
@@ -240,13 +246,13 @@ ERROR .
   cool_yylval.error_msg = "EOF in string constant error";
   return ERROR; 
 }
-<string>[\n] {
+<string>\n {
   curr_lineno++;
   BEGIN(INITIAL);
   cool_yylval.error_msg = "Unterminated string constant";
   return ERROR; 
 }
-<string>[\0] {
+<string>\0 {
   BEGIN(string_transient);
   cool_yylval.error_msg = "String contains null character";
   return ERROR; 

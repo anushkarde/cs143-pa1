@@ -13,7 +13,7 @@ class IdentifierTest {
   objectOfSimpleType : T;
   objectOfLongTypeNameThatIsValidButProbablyNotGoodPractice : VeryLongTypeName;
   
-  -- <dge cases and error cases
+  -- Edge cases and error cases
   id_with_special_char$ : Int; -- Should flag an error
   123invalid_starting_with_number : Int; -- Should flag an error
   spécial_chârs : Int; -- Non-ASCII characters
