@@ -113,11 +113,13 @@ ERROR .
   *  Single line comments
   */
 "--" BEGIN(comment); 
-<comment>[\n<<EOF>>] {
+<comment>[\n] {
   BEGIN(INITIAL);
-  if (yytext[0] == '\n') {
+  if (yytext[0] == '\n')
     curr_lineno++;
-  }
+}
+<comment><<EOF>> {
+  BEGIN(INITIAL);
 }
 <comment>. {
 

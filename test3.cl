@@ -1,4 +1,2 @@
-"\p"
-"\n"
-\
-/
+--begin comment
+-- Edge Cases and error
