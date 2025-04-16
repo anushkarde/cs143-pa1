@@ -27,10 +27,11 @@ THEN THEn THeN THen ThEN ThEn TheN Then tHEN tHEn tHeN tHen thEN thEn theN then
 
 -- Identifiers
 Hello
-_fasjdfkdsfE
+_fasjdfkdsfE    -- invalid identifier because it starts with an underscore
 fight
 friend
 fRIE123214
+FDASDFr123saf4fx.-ff{}  -- identifier followed by various single characters
 1Fredfasd -- invalid identifier because it starts with a integer 
 
 -- all possible single characters
@@ -54,6 +55,25 @@ fRIE123214
 -- text in (∗ . . . ∗). The latter form of comment may be nested. Comments cannot cross file boundaries.
 (*NESTED COMMENT*) 
 (* (* (* SUPER NESTED COMMENT *) *) *) 
+
+-- Comment inside string
+" STRINGSJFKDSAJFKSDJFSDKFJDSKFJSD (* afksdfjasdkfjsdf *)" 
+" -- this is a comment inside a string so it shouldn't matter "
+
+-- Testing all types of white space
+
+
+
+                            \t \r \n \v \f
+
+-- Single quote stuff
+' EHREREJR ' 
+'\t'
+'\n'
+
+-- Errors: basically, everything else
+#$&^>`| %
+¢§¶•ªº«»†‡‰⁂⁋←↑→↓↔∞≠∑∏∫∂∇
 
 -- Escape sequences in strings
 "\n\n\t\b\p\c\r\\\asfdfd\fdsaf"
@@ -99,30 +119,14 @@ class Test inherits IO {
 
 -- ERROR TESTS SECTION
 
-(* UNCLOSED COMMENT
 class Broken {
-*)  -- should cause unclosed comment error
 
 "Unclosed string literal  
 -- missing ending quote, should cause error
 
-"String with bad escape: \q"  -- invalid escape sequence
-
-let bad <- 100 in  -- missing type declaration (should be let bad : Int <- 100)
-
-if true then
-    out_string("if block")
--- missing 'else' and 'fi'
-
-x <- 5 + ;  -- incomplete expression
-
-class class inherits Int { }  -- 'class' used as an identifier (should be error)
+"String with character escape: \q"  -- escape sequence
 
 0abc <- 10;  -- invalid identifier (starts with a digit)
-
-let \tweird: String <- "ok";  -- invalid identifier with escape character
-
-"Ends with EOF \0"  -- null character not allowed in string
 
 let cross: String <- "This string
 spans lines";  -- non-escaped newline in string

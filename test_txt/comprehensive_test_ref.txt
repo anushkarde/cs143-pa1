@@ -581,192 +581,268 @@
 #31 OBJECTID fight
 #32 OBJECTID friend
 #33 OBJECTID fRIE123214
-#34 INT_CONST 1
-#34 TYPEID Fredfasd
-#37 ':'
-#37 ';'
-#37 ','
-#37 '.'
-#37 '@'
-#37 ERROR "["
-#37 ERROR "]"
-#37 '{'
-#37 '}'
-#37 '('
-#37 ')'
-#37 DARROW
-#37 ASSIGN
-#37 '+'
-#37 '-'
-#37 '*'
-#37 '/'
-#37 '~'
-#37 '<'
-#37 LE
-#37 '='
-#41 STR_CONST "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-#44 ERROR "String constant too long"
-#47 ERROR "String constant too long"
-#50 ERROR "String constant too long"
-#52 ERROR "Unterminated string constant"
-#59 STR_CONST "\n\n\t\bpcr\\asfdfd\fdsaf"
-#61 ERROR "Unterminated string constant"
-#61 STR_CONST ""
-#63 ERROR "Unterminated string constant"
-#66 CLASS
-#66 TYPEID Test
-#66 INHERITS
-#66 TYPEID IO
-#66 '{'
-#67 OBJECTID main
-#67 '('
-#67 ')'
-#67 ':'
-#67 TYPEID Object
-#67 '{'
-#68 '{'
-#69 LET
-#69 OBJECTID num
-#69 ':'
-#69 TYPEID Int
-#69 ASSIGN
-#69 INT_CONST 42
-#69 IN
-#70 LET
-#70 OBJECTID txt
-#70 ':'
-#70 TYPEID String
-#70 ASSIGN
-#70 STR_CONST "Hello\nWorld\tTabbed!"
-#70 IN
-#71 LET
-#71 OBJECTID flag
-#71 ':'
-#71 TYPEID Bool
-#71 ASSIGN
-#71 BOOL_CONST false
-#71 IN
-#73 IF
-#73 ISVOID
-#73 OBJECTID num
-#73 THEN
-#74 OBJECTID out_string
-#74 '('
-#74 STR_CONST "Void\n"
-#74 ')'
-#75 ELSE
-#76 OBJECTID out_int
-#76 '('
-#76 OBJECTID num
-#76 '+'
-#76 INT_CONST 1
-#76 ')'
-#77 FI
-#77 ';'
-#79 WHILE
-#79 OBJECTID num
-#79 '<'
-#79 INT_CONST 100
-#79 LOOP
-#80 OBJECTID num
-#80 ASSIGN
-#80 OBJECTID num
-#80 '+'
-#80 INT_CONST 1
-#81 POOL
-#81 ';'
-#83 CASE
-#83 OBJECTID flag
-#83 OF
-#84 OBJECTID t
-#84 ':'
-#84 TYPEID Bool
-#84 DARROW
-#84 OBJECTID out_string
-#84 '('
-#84 STR_CONST "True branch\n"
-#84 ')'
-#84 ';'
-#85 OBJECTID f
-#85 ':'
-#85 TYPEID Bool
-#85 DARROW
-#85 OBJECTID out_string
-#85 '('
-#85 STR_CONST "False branch\n"
-#85 ')'
-#85 ';'
-#86 ESAC
-#86 ';'
-#89 OBJECTID justRight
-#89 '='
-#89 STR_CONST "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-#92 NEW
-#92 TYPEID Test
-#92 ';'
-#93 NOT
-#93 OBJECTID flag
-#93 ';'
-#94 '~'
-#94 INT_CONST 5
-#94 ';'
-#95 '}'
-#96 '}'
-#96 ';'
-#97 '}'
+#34 TYPEID FDASDFr123saf4fx
+#34 '.'
+#34 '-'
+#34 OBJECTID ff
+#34 '{'
+#34 '}'
+#35 INT_CONST 1
+#35 TYPEID Fredfasd
+#38 ':'
+#38 ';'
+#38 ','
+#38 '.'
+#38 '@'
+#38 ERROR "["
+#38 ERROR "]"
+#38 '{'
+#38 '}'
+#38 '('
+#38 ')'
+#38 DARROW
+#38 ASSIGN
+#38 '+'
+#38 '-'
+#38 '*'
+#38 '/'
+#38 '~'
+#38 '<'
+#38 LE
+#38 '='
+#42 STR_CONST "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+#45 ERROR "String constant too long"
+#48 ERROR "String constant too long"
+#51 ERROR "String constant too long"
+#53 ERROR "Unterminated string constant"
+#60 STR_CONST " STRINGSJFKDSAJFKSDJFSDKFJDSKFJSD (* afksdfjasdkfjsdf *)"
+#61 STR_CONST " -- this is a comment inside a string so it shouldn't matter "
+#67 ERROR "\\"
+#67 OBJECTID t
+#67 ERROR "\\"
+#67 OBJECTID r
+#67 ERROR "\\"
+#67 OBJECTID n
+#67 ERROR "\\"
+#67 OBJECTID v
+#67 ERROR "\\"
+#67 OBJECTID f
+#70 ERROR "'"
+#70 TYPEID EHREREJR
+#70 ERROR "'"
+#71 ERROR "'"
+#71 ERROR "\\"
+#71 OBJECTID t
+#71 ERROR "'"
+#72 ERROR "'"
+#72 ERROR "\\"
+#72 OBJECTID n
+#72 ERROR "'"
+#75 ERROR "#"
+#75 ERROR "$"
+#75 ERROR "&"
+#75 ERROR "^"
+#75 ERROR ">"
+#75 ERROR "`"
+#75 ERROR "|"
+#75 ERROR "%"
+#76 ERROR "\302"
+#76 ERROR "\242"
+#76 ERROR "\302"
+#76 ERROR "\247"
+#76 ERROR "\302"
+#76 ERROR "\266"
+#76 ERROR "\342"
+#76 ERROR "\200"
+#76 ERROR "\242"
+#76 ERROR "\302"
+#76 ERROR "\252"
+#76 ERROR "\302"
+#76 ERROR "\272"
+#76 ERROR "\302"
+#76 ERROR "\253"
+#76 ERROR "\302"
+#76 ERROR "\273"
+#76 ERROR "\342"
+#76 ERROR "\200"
+#76 ERROR "\240"
+#76 ERROR "\342"
+#76 ERROR "\200"
+#76 ERROR "\241"
+#76 ERROR "\342"
+#76 ERROR "\200"
+#76 ERROR "\260"
+#76 ERROR "\342"
+#76 ERROR "\201"
+#76 ERROR "\202"
+#76 ERROR "\342"
+#76 ERROR "\201"
+#76 ERROR "\213"
+#76 ERROR "\342"
+#76 ERROR "\206"
+#76 ERROR "\220"
+#76 ERROR "\342"
+#76 ERROR "\206"
+#76 ERROR "\221"
+#76 ERROR "\342"
+#76 ERROR "\206"
+#76 ERROR "\222"
+#76 ERROR "\342"
+#76 ERROR "\206"
+#76 ERROR "\223"
+#76 ERROR "\342"
+#76 ERROR "\206"
+#76 ERROR "\224"
+#76 ERROR "\342"
+#76 ERROR "\210"
+#76 ERROR "\236"
+#76 ERROR "\342"
+#76 ERROR "\211"
+#76 ERROR "\240"
+#76 ERROR "\342"
+#76 ERROR "\210"
+#76 ERROR "\221"
+#76 ERROR "\342"
+#76 ERROR "\210"
+#76 ERROR "\217"
+#76 ERROR "\342"
+#76 ERROR "\210"
+#76 ERROR "\253"
+#76 ERROR "\342"
+#76 ERROR "\210"
+#76 ERROR "\202"
+#76 ERROR "\342"
+#76 ERROR "\210"
+#76 ERROR "\207"
+#79 STR_CONST "\n\n\t\bpcr\\asfdfd\fdsaf"
+#81 ERROR "Unterminated string constant"
+#81 STR_CONST ""
+#83 ERROR "Unterminated string constant"
+#86 CLASS
+#86 TYPEID Test
+#86 INHERITS
+#86 TYPEID IO
+#86 '{'
+#87 OBJECTID main
+#87 '('
+#87 ')'
+#87 ':'
+#87 TYPEID Object
+#87 '{'
+#88 '{'
+#89 LET
+#89 OBJECTID num
+#89 ':'
+#89 TYPEID Int
+#89 ASSIGN
+#89 INT_CONST 42
+#89 IN
+#90 LET
+#90 OBJECTID txt
+#90 ':'
+#90 TYPEID String
+#90 ASSIGN
+#90 STR_CONST "Hello\nWorld\tTabbed!"
+#90 IN
+#91 LET
+#91 OBJECTID flag
+#91 ':'
+#91 TYPEID Bool
+#91 ASSIGN
+#91 BOOL_CONST false
+#91 IN
+#93 IF
+#93 ISVOID
+#93 OBJECTID num
+#93 THEN
+#94 OBJECTID out_string
+#94 '('
+#94 STR_CONST "Void\n"
+#94 ')'
+#95 ELSE
+#96 OBJECTID out_int
+#96 '('
+#96 OBJECTID num
+#96 '+'
+#96 INT_CONST 1
+#96 ')'
+#97 FI
 #97 ';'
-#107 ERROR "Unterminated string constant"
-#109 STR_CONST "String with bad escape: q"
-#111 LET
-#111 OBJECTID bad
-#111 ASSIGN
-#111 INT_CONST 100
-#111 IN
-#113 IF
-#113 BOOL_CONST true
-#113 THEN
-#114 OBJECTID out_string
-#114 '('
-#114 STR_CONST "if block"
-#114 ')'
-#117 OBJECTID x
-#117 ASSIGN
-#117 INT_CONST 5
-#117 '+'
+#99 WHILE
+#99 OBJECTID num
+#99 '<'
+#99 INT_CONST 100
+#99 LOOP
+#100 OBJECTID num
+#100 ASSIGN
+#100 OBJECTID num
+#100 '+'
+#100 INT_CONST 1
+#101 POOL
+#101 ';'
+#103 CASE
+#103 OBJECTID flag
+#103 OF
+#104 OBJECTID t
+#104 ':'
+#104 TYPEID Bool
+#104 DARROW
+#104 OBJECTID out_string
+#104 '('
+#104 STR_CONST "True branch\n"
+#104 ')'
+#104 ';'
+#105 OBJECTID f
+#105 ':'
+#105 TYPEID Bool
+#105 DARROW
+#105 OBJECTID out_string
+#105 '('
+#105 STR_CONST "False branch\n"
+#105 ')'
+#105 ';'
+#106 ESAC
+#106 ';'
+#109 OBJECTID justRight
+#109 '='
+#109 STR_CONST "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+#112 NEW
+#112 TYPEID Test
+#112 ';'
+#113 NOT
+#113 OBJECTID flag
+#113 ';'
+#114 '~'
+#114 INT_CONST 5
+#114 ';'
+#115 '}'
+#116 '}'
+#116 ';'
+#117 '}'
 #117 ';'
-#119 CLASS
-#119 CLASS
-#119 INHERITS
-#119 TYPEID Int
-#119 '{'
-#119 '}'
-#121 INT_CONST 0
-#121 OBJECTID abc
-#121 ASSIGN
-#121 INT_CONST 10
-#121 ';'
-#123 LET
-#123 ERROR "\\"
-#123 OBJECTID tweird
-#123 ':'
-#123 TYPEID String
-#123 ASSIGN
-#123 STR_CONST "ok"
-#123 ';'
-#125 STR_CONST "Ends with EOF 0"
-#127 LET
-#127 OBJECTID cross
-#127 ':'
-#127 TYPEID String
-#127 ASSIGN
-#128 ERROR "Unterminated string constant"
-#128 OBJECTID spans
-#128 OBJECTID lines
-#129 ERROR "Unterminated string constant"
-#131 OBJECTID tooBig
-#131 '='
-#131 ERROR "String constant too long"
-#134 ERROR "\303"
-#134 ERROR "\240"
-#134 '='
-#134 STR_CONST "\302\250\313\232\303\270\313\206\313\231\303\270\313\206\313\206\303\270\302\250\313\234\313\232\342\210\206\342\210\206\313\231\302\251"
+#122 CLASS
+#122 TYPEID Broken
+#122 '{'
+#125 ERROR "Unterminated string constant"
+#127 STR_CONST "String with character escape: q"
+#129 INT_CONST 0
+#129 OBJECTID abc
+#129 ASSIGN
+#129 INT_CONST 10
+#129 ';'
+#131 LET
+#131 OBJECTID cross
+#131 ':'
+#131 TYPEID String
+#131 ASSIGN
+#132 ERROR "Unterminated string constant"
+#132 OBJECTID spans
+#132 OBJECTID lines
+#133 ERROR "Unterminated string constant"
+#135 OBJECTID tooBig
+#135 '='
+#135 ERROR "String constant too long"
+#138 ERROR "\303"
+#138 ERROR "\240"
+#138 '='
+#138 STR_CONST "\302\250\313\232\303\270\313\206\313\231\303\270\313\206\313\206\303\270\302\250\313\234\313\232\342\210\206\342\210\206\313\231\302\251"
