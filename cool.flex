@@ -248,7 +248,7 @@ ERROR .
 }
 <string>\0 {
   BEGIN(string_transient);
-  cool_yylval.error_msg = "String contains null character";
+  cool_yylval.error_msg = "String contains null character.";
   return ERROR; 
 }
 

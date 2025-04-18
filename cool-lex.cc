@@ -1392,7 +1392,7 @@ YY_RULE_SETUP
 #line 250 "cool.flex"
 {
   BEGIN(string_transient);
-  cool_yylval.error_msg = "String contains null character";
+  cool_yylval.error_msg = "String contains null character.";
   return ERROR; 
 }
 	YY_BREAK
