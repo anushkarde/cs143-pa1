@@ -99,13 +99,12 @@ UNMATCHED_CLOSE_COMMENT "*"")"
 /*
  * Error catch all
  */
-ERROR .
+ERROR [^\n]
 
 %x string 
 %x string_transient
 %x comment
 %x nested_comment
-
 
 %%
 
@@ -115,8 +114,7 @@ ERROR .
 "--" BEGIN(comment); 
 <comment>\n {
   BEGIN(INITIAL);
-  if (yytext[0] == '\n')
-    curr_lineno++;
+  curr_lineno++;
 }
 <comment><<EOF>> {
   BEGIN(INITIAL);
@@ -169,7 +167,7 @@ ERROR .
 {LE} { return LE; }
 
 {WHITESPACE} {
-  if (*yytext == '\n') {
+  if (yytext[0] == '\n') {
     curr_lineno++;
   }
 }
@@ -234,7 +232,15 @@ ERROR .
   cool_yylval.symbol = stringtable.add_string(string_buf);
   return STR_CONST; 
 }
-
+<string>\\\n {
+    *string_buf_ptr++ = '\n';
+    curr_lineno++;
+    if (string_buf_ptr - &string_buf[0] > MAX_STR_CONST) {
+      BEGIN(string_transient);
+      cool_yylval.error_msg = "String constant too long";
+      return ERROR;
+    }
+}
 <string><<EOF>> {
   BEGIN(string_transient);
   cool_yylval.error_msg = "EOF in string constant";
@@ -251,6 +257,11 @@ ERROR .
   cool_yylval.error_msg = "String contains null character.";
   return ERROR; 
 }
+<string>\\\0 {
+  BEGIN(string_transient);
+  cool_yylval.error_msg = "String contains escaped null character.";
+  return ERROR; 
+}
 
 <string>\\[tbnf] {
   if (yytext[1] == 'n') {
@@ -262,9 +273,19 @@ ERROR .
   } else {
     *string_buf_ptr++ = '\f';
   }
+  if (string_buf_ptr - &string_buf[0] >= MAX_STR_CONST) {
+    BEGIN(string_transient);
+    cool_yylval.error_msg = "String constant too long";
+    return ERROR;
+  }
 }
 <string>\\[^tbnf] {
   *string_buf_ptr++ = yytext[1];
+  if (string_buf_ptr - &string_buf[0] >= MAX_STR_CONST) {
+    BEGIN(string_transient);
+    cool_yylval.error_msg = "String constant too long";
+    return ERROR;
+  }
 }
 
 <string>. {
@@ -278,7 +299,10 @@ ERROR .
 <string_transient>[\"] {
   BEGIN(INITIAL);
 }
-<string_transient>[\n] {
+<string_transient>\\\n {
+  curr_lineno++;
+}
+<string_transient>\n {
   curr_lineno++;
   BEGIN(INITIAL);
 }

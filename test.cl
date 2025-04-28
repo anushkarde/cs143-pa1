@@ -255,6 +255,7 @@ FDASDFr123saf4fx.-ff{}  -- identifier followed by various single characters
 -- Comment inside string
 " STRINGSJFKDSAJFKSDJFSDKFJDSKFJSD (* afksdfjasdkfjsdf *)" 
 " -- this is a comment inside a string so it shouldn't matter "
+"" --this is an empty string
 
 -- Testing all types of white space
                             \t \r \n \v \f
