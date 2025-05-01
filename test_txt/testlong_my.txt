@@ -1,0 +1,4 @@
+#name "testlong.cl"
+#1 OBJECTID hi
+#1 '='
+#1 ERROR "String constant too long"
